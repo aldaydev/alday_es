@@ -109,11 +109,29 @@ body {
     transform: scale(1.3);
 }
 
-
-
-
-
 .header__toggle {
     display: none;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+}
+
+.toggle__lines {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: var(--color-background);
+}
+
+.toogle__line--1{
+    top: 5px;
+}
+
+.toogle__line--4{
+    bottom: 2px;
 }
 

@@ -1,0 +1,8 @@
+@media screen and (max-width: 1024px){
+    
+    .nav__pages {
+        order: 3;
+    
+        font-size: 2rem;
+    }
+}
