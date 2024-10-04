@@ -18,7 +18,7 @@
         width: 100%;
         height: 3px;
         border-radius: 2px;
-        background-color: var(--color-background);
+        background-color: var(--color-text);
     }
 
     .toogle__line--2,
