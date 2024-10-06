@@ -171,11 +171,15 @@ body {
     flex-direction: column;
     justify-content: space-between;
     gap: 3rem;
-
 }
 
 .single__img {
     width: 100%;
+    transition: transform .3s ease-in-out;
+}
+
+.single__img:hover{
+    transform: scale(1.1);
 }
 
 /*ESTILOS FOOTER*/
@@ -209,9 +213,9 @@ body {
     height: 0.6rem;
     border-radius: 50%;
     background-color: var(--color-text);
-    /* position: absolute;
+    position: absolute;
     top: 40%;
-    right: -12%; */
+    right: -12%;
 }
 
 .footer__text{
