@@ -18,7 +18,7 @@
     <title>Alday - Música y videclips</title>
 </head>
 <body>
-
+    <!--Header / Nav de la página-->
     <header class="header">
         
         <a href="#" class="header__logo-link">
@@ -28,6 +28,9 @@
         <nav class="header__nav">
 
             <ul class="nav__pages">
+                <li class="pages__item">
+                    <a href="home.html" class="pages__link">INICIO</a>
+                </li>
                 <li class="pages__item">
                     <a href="biografia.html" class="pages__link">BIOGRAFÍA</a>
                 </li>
@@ -75,57 +78,60 @@
         </button>
 
     </header>
-
+    <!--Contenido Main-->
     <main class="main">
 
         <header class="main__header">
-            <h1 class="main__title">TODA LA MÚSICA DE ALDAY</h1>
-            <h2 class="main__subtitle">ANTES DE NADA, TE INVITO A ESCUCHAR UNO DE MIS ÚLTIMOS SINGLES</h2>
+            <h1 class="single__title">TODA LA <strong>MÚSICA</strong> DE ALDAY</h1>
+            <h2 class="single__subtitle">ANTES DE NADA, TE INVITO A ESCUCHAR UNO DE MIS ÚLTIMOS SINGLES</h2>
         </header>
 
-        <section class="main__last-single">
+        <section class="main__single">
 
-            <div class="last-single__video">
-                <iframe class="last-single__iframe" src="https://www.youtube.com/embed/a4GZnXQbZbI?si=W_hfPSJfmBtoGCqL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="single__video">
+                <iframe class="single__iframe" src="https://www.youtube.com/embed/a4GZnXQbZbI?si=W_hfPSJfmBtoGCqL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
 
-            <ul class="last-single__list">
-                <li class="last-single__item">
-                    <a href="#" class="last-single__link">
-                        <img src="./assets/img/icon-spotify.png" alt="Logo de Spotify" class="last-single__img">
+            <ul class="single__list">
+                <li class="single__item">
+                    <a href="#" class="single__link">
+                        <img src="./assets/img/logo-spotify-black_50x50.png" alt="Logo de Spotify" class="single__img">
                     </a>
                 </li>
-                <li class="last-single__item">
-                    <a href="#" class="last-single__link">
-                        <img src="./assets/img/logo-apple-black_50x50.png" alt="Logo de Spotify" class="last-single__img">
+                <li class="single__item">
+                    <a href="#" class="single__link">
+                        <img src="./assets/img/logo-apple-black_50x50.png" alt="Logo de Apple Music" class="single__img">
                     </a>
                 </li>
-                <li class="last-single__item">
-                    <a href="#" class="last-single__link">
-                        <img src="./assets/img/logo-youtube-black_50x50.png" alt="Logo de Spotify" class="last-single__img">
+                <li class="single__item">
+                    <a href="#" class="single__link">
+                        <img src="./assets/img/logo-youtube-black_50x50.png" alt="Logo de Youtube" class="single__img">
                     </a>
                 </li>
-                <li class="last-single__item">
-                    <a href="#" class="last-single__link">
-                        <img src="./assets/img/logo-amazon_50x50.png" alt="Logo de Spotify" class="last-single__img">
+                <li class="single__item">
+                    <a href="#" class="single__link">
+                        <img src="./assets/img/logo-amazon_50x50.png" alt="Logo de Amazon Music" class="single__img">
+                    </a>
+                </li>
+                <li class="single__item">
+                    <a href="#" class="single__link">
+                        <img src="./assets/img/logo-deezer_50x50.png" alt="Logo de Deezer" class="single__img">
+                    </a>
+                </li>
+                <li class="single__item">
+                    <a href="#" class="single__link">
+                        <img src="./assets/img/logo-tidal_50x50.png" alt="Logo de Tidal" class="single__img">
                     </a>
                 </li>
             </ul>
-
-            <article class="last-single__article">
-                <h3 class="last-single__title">Dispárame, una canción creada en directo</h3>
-                <p class="last-single__text">Este es uno de los temas más especiales que he compuesto, no solo por lo que representa la canción para mí y por lo bonita que creo que quedó la letra, si no porque fue creada en mis directos de twitch, junto a todo aquel que le apetecío formar parte de ese momento conmigo. Sus nombre están al final del vídeolyric, el cual también diseñamos en streming. También puedes escucharla en todas las platadormas digitales.</p>
-            </article>
-            
-            <div class="last-single__more-videos">
-                <h4 class="more-videos__title">Si quieres ver más videoclips te invito a suscribirte a mi canal de Youtube</h4>
-                <button>MI CANAL DE YOUTUBE <img src="./" alt="">
-                </button>
-            </div>
-
-            
         </section>
-
     </main>
+    <!--Footer-->
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__name">Rafa Alday 2024</p>
+        <p class="footer__text">Todos los derechos reservados</p>
+        </div>
+    </footer>
 </body>
 </html>

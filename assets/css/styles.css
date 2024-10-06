@@ -53,6 +53,7 @@ body {
 
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 
 .header__logo-img{
@@ -84,7 +85,7 @@ body {
     top: 100%;
     width: 0%;
     height: 1.2px;
-    background-color: var(--color-background);
+    background-color: var(--color-text);
     transition: width .3s ease-in-out;
 }
 
@@ -123,59 +124,99 @@ body {
 /*ESTILOS MAIN*/
 
 .main {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
-    margin-top: 3rem;
+    padding: 3rem;
+    position: relative;
+    z-index: 10;
 }
 
 .main__header{
     text-align: center;
-    margin-bottom: 3rem;
+    margin: 2.6rem 0;
 }
-
-.main__title{
+.single__title{
+    font-size: 3rem;
     margin-bottom: 1.5rem;
 }
 
-.main__subtitle{
+.single__subtitle{
     font-size: 2rem;
     text-wrap: balance;
 }
 
-.main__last-single{
-    display: grid;
-    grid-template-areas: 
-    "video links article"
-    "more more more";
-    grid-template-columns: 4.5fr 1fr 4.5fr;
-    grid-template-rows: fit-content auto auto;
-    justify-items: center;
-    
+.main__single{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.7rem;
 }
 
-.last-single__video{
-    grid-area: video;
+.single__video{
+    flex-basis: 80%;
 }
 
-.last-single__iframe{
+.single__iframe{
     aspect-ratio: 16/9;
+    padding: 2rem;
     width: 100%;
     height: 100%;
 }
 
-.last-single__list{
-    grid-area: links;
-}
-
-.last-single__article{
-    grid-area: article;
-}
-
-.last-single__more-videos{
-    grid-area: more;
-}
-
-.last-single__img {
-    width: 60px;
+.single__list{
+    padding: 2rem 0;
+    flex-basis: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
 
 }
+
+.single__img {
+    width: 100%;
+}
+
+/*ESTILOS FOOTER*/
+
+.footer{
+    position: absolute;
+    top: 100;
+    width: 100%;
+    background-color: var(--color-principal);
+    height: 8rem;
+}
+
+.footer__container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    font-size: 2.1rem;
+    color: var(--color-text);
+}
+
+.footer__name{
+    position: relative;
+    display: block;
+}
+
+.footer__name::after{
+    content: "";
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background-color: var(--color-text);
+    /* position: absolute;
+    top: 40%;
+    right: -12%; */
+}
+
+.footer__text{
+    display: block;
+}
+
+
+

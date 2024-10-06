@@ -10,7 +10,7 @@ document.addEventListener ("DOMContentLoaded" , ()=>{
         let visible = document.querySelector(".visible");
         if(!visible) {
             header.classList.add("visible");
-            header.style.height = "330px";
+            header.style.height = "375px";
             line1.style.top = "50%";
             line1.style.opacity = "0";
             line4.style.top = "50%";

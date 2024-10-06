@@ -56,6 +56,7 @@
 
     .nav__pages {
         flex-direction: column;
+        align-items: center;
         gap: 2rem;
         font-size: 2.5rem;
     }
