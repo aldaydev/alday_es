@@ -38,7 +38,14 @@ body {
     font-size: 1.6rem;
     font-weight: 400;
     background-color: var(--color-background);
+    height: 100%;
+    position: relative;
 }
+
+/* .container{
+    height: 100%;
+    width: 100%;
+} */
 
 /*ESTILOS HEADER*/
 
@@ -125,8 +132,9 @@ body {
 
 .main {
     width: 100%;
+    min-height: calc(100vh - 100px);
     margin: 0 auto;
-    padding: 3rem;
+    /* padding: 3rem; */
     position: relative;
     z-index: 10;
 }
@@ -138,11 +146,33 @@ body {
 .single__title{
     font-size: 3rem;
     margin-bottom: 1.5rem;
+    animation-name: title;
+    animation-duration: 1s;
+}
+
+@keyframes title {
+    from {
+        transform:translateY(-30px);
+    }
+    to{
+        transform: translateY(0);
+    }
 }
 
 .single__subtitle{
     font-size: 2rem;
     text-wrap: balance;
+    animation-name: subtitle;
+    animation-duration: 1s;
+}
+
+@keyframes subtitle {
+    from {
+        transform:translateY(30px);
+    }
+    to{
+        ttransform:translateY(0);
+    }
 }
 
 .main__single{
@@ -150,11 +180,23 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    margin-bottom: 2.9rem;
+    /* margin-bottom: 2.9rem; */
+    
 }
 
 .single__video{
     flex-basis: 80%;
+    animation-name: video;
+    animation-duration: 1s;
+}
+
+@keyframes video {
+    from {
+        transform:translateX(-100px);
+    }
+    to{
+        ttransform:translateX(0);
+    }
 }
 
 .single__iframe{
@@ -173,20 +215,57 @@ body {
     gap: 3rem;
 }
 
+.single__item{
+    animation-name: list;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+}
+
+@keyframes list {
+    from {
+        transform:translateX(100px) rotate(90deg);
+        opacity: 0;
+    }
+    to{
+        ttransform:translateX(0);
+        opacity: 1;
+    }
+}
+
+.single__item:nth-child(2){
+    animation-delay: 0.2s;
+}
+
+.single__item:nth-child(3){
+    animation-delay: 0.3s;
+}
+
+.single__item:nth-child(4){
+    animation-delay: 0.4s;
+}
+
+.single__item:nth-child(5){
+    animation-delay: 0.5s;
+}
+
+.single__item:nth-child(6){
+    animation-delay: 0.6s;
+}
+
 .single__img {
     width: 100%;
     transition: transform .3s ease-in-out;
 }
 
 .single__img:hover{
-    transform: scale(1.1);
+    transform: scale(1.1) rotate(25deg);
 }
 
 /*ESTILOS FOOTER*/
 
 .footer{
     position: absolute;
-    top: 100;
+    top: 100%;
     width: 100%;
     background-color: var(--color-principal);
     height: 8rem;
