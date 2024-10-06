@@ -80,6 +80,7 @@
         height: 73.97px;
         overflow: hidden;
         transition: height .3s ease-in-out;
+        position: absolute;
     }
     
     .header__nav{
