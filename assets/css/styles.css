@@ -59,6 +59,7 @@ body {
     align-items: center;
 
     position: sticky;
+    top: 0;
     z-index: 100;
 }
 
@@ -75,7 +76,7 @@ body {
 
 .nav__pages {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     font-size: 2rem;
 }
 
@@ -142,6 +143,7 @@ body {
     text-align: center;
     margin: 2.6rem 0;
 }
+
 .single__title{
     font-size: 3rem;
     margin-bottom: 1.5rem;
@@ -175,16 +177,18 @@ body {
 }
 
 .main__single{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    padding: 0 5rem;
     /* margin-bottom: 2.9rem; */
     
 }
 
 .single__video{
     flex-basis: 80%;
+    padding: 0;
     animation-name: video;
     animation-duration: 1s;
 }
@@ -207,11 +211,11 @@ body {
 
 .single__list{
     padding: 2rem 0;
+    width: 100%;
     flex-basis: 5%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 3rem;
 }
 
 .single__item{

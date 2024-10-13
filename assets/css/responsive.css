@@ -1,5 +1,6 @@
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1441px) {
     
+    /*Sección Main*/
     .main {
         padding: 0 3rem;
     }
@@ -25,14 +26,40 @@
     }
 
     .single__list{
-        padding: 2rem 0;
-        flex-basis: 80%;
+        padding: 0 0 2rem 0;
+        flex-basis: 100%;
+        width: 70%;
+        margin: 0 auto;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         gap: 3rem;
     }
 
+}
+
+@media screen and (max-width: 1024px) {
+
+    .main__single{
+        width: 100%;
+        padding: 0;
+    }
+
+    .single__title{
+        font-size: 4rem;
+    }
+
+    .single__subtitle{
+        font-size: 2.5rem;
+    }
+
+    .single__video{
+        padding: 0;
+    }
+
+    .single__list{
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 979px){
@@ -80,6 +107,9 @@
         height: 73.97px;
         overflow: hidden;
         transition: height .3s ease-in-out;
+        position: fixed;
+        top: 0;
+        z-index: 100;
     }
     
     .header__nav{
@@ -108,5 +138,73 @@
 
     .nav__social {
         gap: 3rem;
+    }
+
+    /*Sección MAIN*/
+
+    .main{
+        margin-top: 100px;
+    }
+
+    .single__title{
+        font-size: 3.5rem;
+    }
+
+    .single__subtitle{
+        font-size: 2rem;
+    }
+    
+    .single__video{
+        padding: 0;
+    }
+
+    .single__list{
+        width: 90%;
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 519px){
+    
+    /*Sección Main*/
+
+    .main{
+        padding: 0 1rem;
+    }
+
+    .main__header{
+        margin: 2.6rem 0.5rem;
+    }
+
+    .single__title{
+        font-size: 3rem;
+        text-wrap: balance;
+        margin-bottom: 2rem;
+    }
+
+    .single__subtitle{
+        font-size: 1.8rem;
+        text-wrap: balance;
+    }
+
+    .single__iframe{
+        padding: 0.5rem;
+    }
+
+    .single__list{
+        flex-wrap: wrap;
+        padding: 0 3rem;
+        margin: 1.5rem auto;
+    }
+
+    .single__item{
+        flex-basis: calc(33% - 3rem);
+    }
+
+    /*Sección Footer*/
+
+    .footer__container{
+        flex-direction: column;
+        gap: 0.3rem;
     }
 }
