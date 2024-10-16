@@ -43,8 +43,7 @@ body {
 }
 
 /* .container{
-    height: 100%;
-    width: 100%;
+    margin: auto;
 } */
 
 /*ESTILOS HEADER*/
@@ -132,11 +131,16 @@ body {
 
 .main {
     width: 100%;
+    height: 100%;
     min-height: calc(100vh - 100px);
     margin: 0 auto;
+    margin-bottom: 2rem;
     /* padding: 3rem; */
     position: relative;
     z-index: 10;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
 }
 
 .main__header{
@@ -263,6 +267,72 @@ body {
 .single__img:hover{
     transform: scale(1.1) rotate(25deg);
 }
+
+
+/*ESTILOS BIOGRAFÍA*/
+
+.main__bio{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin: 0 auto;
+    padding: 0 5rem;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+}
+
+.bio__foto-container{
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.bio__foto{
+    margin: 0 auto;
+    max-width: 400px;
+    max-height: 400px;
+    min-width: 200px;
+    min-height: 200px;
+    vertical-align:middle;
+    transition: transform .3s ease-in-out;
+}
+
+.bio__foto:hover{
+    transform: scale(1.1);
+}
+
+.bio__data{
+    flex-basis: 50%;
+    max-width: 600px;
+    font-size: 2rem;
+}
+
+.bio-more__subtitle{
+    text-align: center;
+    animation-name: subtitle;
+    animation-duration: 1s;
+}
+
+.bio-more__social{
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.bio-more__link{
+    transition: transform .3s ease-in-out;
+}
+
+.bio-more__img{
+    transition: transform .3s ease-in-out;
+}
+
+.bio-more__link:hover .bio-more__img{
+    transform: rotateZ(360deg);
+}
+
 
 /*ESTILOS FOOTER*/
 
