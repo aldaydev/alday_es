@@ -14,8 +14,9 @@
 
     <!--Link a javascript-->
     <script src="./assets/js/menu.js" defer></script>
+    <script src="./assets/js/show-videos.js" defer></script>
 
-    <title>Alday - Trayectoria musical</title>
+    <title>Alday - Trabajos y videclips</title>
 </head>
 <body>
     <div class="container">
@@ -83,54 +84,61 @@
         <main class="main">
 
             <header class="main__header">
-                <h1 class="single__title">MI <strong>TRAYECTORIA</strong> MUSICAL</h1>
-                <!-- <h2 class="single__subtitle">ANTES DE NADA, TE INVITO A ESCUCHAR UNO DE MIS ÚLTIMOS SINGLES</h2> -->
+                <h1 class="single__title">MIS <strong>TRABAJOS</strong></h1>
+                <h2 class="single__subtitle">Selecciona el trabajo que quieras y te muestro los videoclips</h2>
             </header>
 
-            <section class="main__bio">
-
-                <div class="bio__foto-container">
-                    <img src="./assets/img/foto-alday_500x500.jpg" alt="Foto de Rafa Alday extraída del videoclip de 'Tenemos que hablar'" class="bio__foto">
+            <section class="main__trabajos">
+                <!--Selector de trabajos-->
+                <div class="trabajos">
+                    <ul class="trabajos__list">
+                        <li onclick="elegirTrabajo('1')">
+                            <figure class="trabajos__figure">
+                                <img src="./assets/img/portada_la-jungla_350px.jpg" alt="Portada del EP 'La jungla' by Alday">
+                                <figcaption>
+                                    <h3 class="portada__title">LA JUNGLA (O MIRAR ATRÁS)</h3>
+                                    <P>EP - 2017</P>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="trabajos__figure">
+                                <img src="./assets/img/portada_elucubraciones_350px.jpg" alt="Portada del EP 'Elucubraciones' by Alday">
+                                <figcaption>
+                                    <h3 class="portada__title">ELUCUBRACIONES</h3>
+                                    <P>EP - 2018</P>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="trabajos__figure">
+                                <img src="./assets/img/portada_uvmd_350px.jpg" alt="Portada del LP 'Una victoria, mil derrotas' by Alday">
+                                <figcaption>
+                                    <h3 class="portada__title">UNA VICTORIA, MIL DERROTAS</h3>
+                                    <P>EP - 2021</P>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="trabajos__figure">
+                                <img src="./assets/img/portada_stream-sessions_350px.jpg" alt="Portada del EP 'Stream Sessions' by Alday">
+                                <figcaption>
+                                    <h3 class="portada__title">STREAM SESSIONS</h3>
+                                    <P>EP - 2024</P>
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
                 </div>
 
-                <article class="bio__data">
-                    <p class="bio__text">Me llamo Rafa Alday y empecé a tocar la guitarra con 13 años. No pasó mucho tiempo hasta que descubrí que podía crear mis propias composiciones y, algo después, que podía crear mis propias letras. Eso supuso un cambio radical en mi vida ya que, desde encontes, siempre he sentido la necesidad de dedicar tiempo a crear. Más adelante, estudié sonido para poder crear mi propias producciónes.</p>
-                    <br>
-                    <p class="bio__text">En 2017, publiqué en todas las plataformas digitales mi primer EP "La jungla (o mirar atrás)", para el cual también grabé y monté mis propios videoclips (visita la sección <a>trabajos</a> para ver algunos de ellos.)</p>
-                    <p class="bio__text">En 2018 publiqué mi segundo EP, titulado "Elucubraciones", un trabajo conceptual en el que las canciones se relacionan entre sí.</p>
-                    <br>
-                    <p class="bio__text">En 2021 publiqué mi primer álbum completo, "Una victoria, mil derrotas", para el cual también produje mis propios videoclips.</p>
-                    <br>
-                    <p class="bio__text">Por último, durante 2022, 2024 y 2024, he estado haciendo directos en Twitch donde creo loops en directo y compongo canciones con seguidores.</p>
-                </article>
+                <div id="videclips"></div>
                 
             </section>
 
-            <section class="main_bio-more">
-                <h2 class="bio-more__subtitle">SÍGUEME EN REDES PARA SABER MÁS <br> ACERCA DE MÍ Y DE MI PROYECTO</h2>
+            <section class="main_videos">
+                
 
-                <ul class="bio-more__social">
-                    <li class="bio-more__item">
-                        <a href="#" class="bio-more__link">
-                            <img src="./assets/img/logo-instagram_50x50.png" alt="Logo de Instagram" class="bio-more__img">
-                        </a>
-                    </li>
-                    <li class="bio-more__item">
-                        <a href="#" class="bio-more__link">
-                            <img src="./assets/img/logo-facebook_50x50.png" alt="Logo de Facebook" class="bio-more__img">
-                        </a>
-                    </li>
-                    <li class="bio-more__item">
-                        <a href="#" class="bio-more__link">
-                            <img src="./assets/img/twitch-icon_50px.png" alt="Logo de Twitch" class="bio-more__img">
-                        </a>
-                    </li>
-                    <li class="bio-more__item">
-                        <a href="#" class="bio-more__link">
-                            <img src="./assets/img/logo-youtube_50x50.png" alt="Logo de Youtube" class="bio-more__img">
-                        </a>
-                    </li>
-                </ul>
+
             </section>
         </main>
         <!--Footer-->

@@ -150,7 +150,7 @@ body {
 
 .single__title{
     font-size: 3rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
     animation-name: title;
     animation-duration: 1s;
 }
@@ -192,6 +192,7 @@ body {
 
 .single__video{
     flex-basis: 80%;
+    max-width: 1200px;
     padding: 0;
     animation-name: video;
     animation-duration: 1s;
@@ -275,17 +276,31 @@ body {
     width: 80%;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 5rem;
     margin: 0 auto;
     padding: 0 5rem;
     margin-top: 3rem;
-    margin-bottom: 6rem;
+    margin-bottom: 8rem;
 }
 
 .bio__foto-container{
     border-radius: 50%;
     overflow: hidden;
+    animation-name: foto;
+    animation-duration: 1s;
 }
+
+@keyframes foto {
+    from {
+        transform:translateX(-100px);
+    }
+    to{
+        ttransform:translateX(0);
+    }
+}
+
+
 
 .bio__foto{
     margin: 0 auto;
@@ -302,9 +317,20 @@ body {
 }
 
 .bio__data{
-    flex-basis: 50%;
-    max-width: 600px;
+    flex-basis: 60%;
+    max-width: 700px;
     font-size: 2rem;
+    animation-name: data;
+    animation-duration: 1s;
+}
+
+@keyframes data {
+    from {
+        transform:translateX(100px);
+    }
+    to{
+        ttransform:translateX(0);
+    }
 }
 
 .bio-more__subtitle{
@@ -322,7 +348,8 @@ body {
 }
 
 .bio-more__link{
-    transition: transform .3s ease-in-out;
+    animation-name: list;
+    animation-duration: 1s;
 }
 
 .bio-more__img{
@@ -331,6 +358,48 @@ body {
 
 .bio-more__link:hover .bio-more__img{
     transform: rotateZ(360deg);
+}
+
+/*ESTILOS TRABAJOS*/
+
+.trabajos{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.trabajos__list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.trabajos__list li{
+    padding: 1rem;
+    background-color: var(--color-principal);
+    min-width: 250px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.trabajos__list li:hover{
+    background-color: var(--color-secondary);
+}
+
+li figure {
+    max-width: 250px;
+}
+
+figure h3, p{
+    text-align: center;
+}
+
+figure h3{
+    font-size: 1.7rem;
+}
+
+figure img{
+    width: 250px;
 }
 
 
