@@ -269,7 +269,6 @@ body {
     transform: scale(1.1) rotate(25deg);
 }
 
-
 /*ESTILOS BIOGRAFÍA*/
 
 .main__bio{
@@ -300,8 +299,6 @@ body {
     }
 }
 
-
-
 .bio__foto{
     margin: 0 auto;
     max-width: 400px;
@@ -322,6 +319,12 @@ body {
     font-size: 2rem;
     animation-name: data;
     animation-duration: 1s;
+}
+
+.bio__data a{
+    font-weight: 400;
+    font-style: italic;
+    color: blueviolet;
 }
 
 @keyframes data {
@@ -377,9 +380,34 @@ body {
 .trabajos__list li{
     padding: 1rem;
     background-color: var(--color-principal);
-    min-width: 250px;
+    min-width: 200px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+    animation-name: trabajosLi;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes trabajosLi {
+    from{
+        transform: translateY(50px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+    
+}
+
+.trabajos__list li:nth-child(2){
+    animation-delay: .05s;
+}
+
+.trabajos__list li:nth-child(3){
+    animation-delay: .10s;
+}
+
+.trabajos__list li:nth-child(4){
+    animation-delay: .15s;
 }
 
 .trabajos__list li:hover{
@@ -387,7 +415,7 @@ body {
 }
 
 li figure {
-    max-width: 250px;
+    max-width: 200px;
 }
 
 figure h3, p{
@@ -395,11 +423,54 @@ figure h3, p{
 }
 
 figure h3{
-    font-size: 1.7rem;
+    font-size: 1.6rem;
 }
 
 figure img{
-    width: 250px;
+    width: 200px;
+}
+
+#videclips{
+    margin: 2rem auto;
+    width: 90%;
+    padding-bottom: 3rem;
+}
+
+#videclips h2{
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    animation-name: subtitle;
+    animation-duration: 1s;
+
+}
+
+.videoGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 400px));
+    justify-content: center;
+    grid-auto-flow: rows;
+    gap: 2rem;
+}
+
+.video{
+    aspect-ratio: 16/9;
+    width: 100%;
+    animation-name: videos;
+    animation-duration: 1s;
+    animation-delay: .5s;
+    animation-fill-mode: both;
+}
+
+@keyframes videos {
+    from{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 
