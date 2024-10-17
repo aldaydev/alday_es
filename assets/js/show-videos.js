@@ -42,9 +42,6 @@ function createVideos(iframe){
     video.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
     video.setAttribute('allowfullscreen', ' ');
 
-    
-
-    console.log(video);
     return video;
 }
 
@@ -55,6 +52,8 @@ videoGrid.setAttribute('class', 'videoGrid');
 let main = document.getElementsByTagName('main');
 
 function elegirTrabajo(value){
+
+    container.setAttribute('class', 'visible');
 
     reset();
 
