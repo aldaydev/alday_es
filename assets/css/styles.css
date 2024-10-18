@@ -94,14 +94,22 @@ body {
     position: absolute;
     top: 100%;
     width: 0%;
-    height: 1.2px;
+    height: 1.1px;
     background-color: var(--color-text);
     transition: width .3s ease-in-out;
 }
 
 .pages__link:hover{
-    font-weight: 600;
-    transform: rotate(8deg);
+    /* font-weight: 600; */
+    transform: translateY(-3px);
+}
+
+.pages__link--current{
+    transform: translateY(-3px);
+}
+
+.pages__link--current.pages__link::before{
+    width: 100%;
 }
 
 .pages__link:hover::before {
