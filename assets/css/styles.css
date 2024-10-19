@@ -3,7 +3,7 @@
 :root {
     --color-principal: #fff0b8;
     --color-secondary: #ffd6a3;
-    --color-background: #fff0b83e;
+    --color-background: #FFFBED;
     --color-text: #142f30;
 }
 
@@ -499,6 +499,110 @@ figure img{
     padding: 0 5rem;
     min-height: 600px;
 }
+
+/*ESTILOS CONTACTO*/
+
+.main__contact{
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 5rem;
+}
+
+.contact__form{
+    background-color: var(--color-principal);
+    border-radius: 20px;
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.contact__personal,
+.contact__mensaje,
+.contact__condiciones{
+    font-size: 2rem;
+    border: 1px solid var(--color-text);
+    border-radius: 10px;
+}
+
+legend{
+    margin: 0 1rem 0 3rem;
+    padding: 0 1rem;
+}
+
+.personal__container{
+    margin: 4rem 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:start;
+}
+
+.personal__container label label{
+    margin-left: 1rem;
+}
+
+label > span{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+input, select, textarea{
+    padding: 0.3rem;
+    padding-left: 1rem;
+    margin-left: 0.5rem;
+    border: 1px solid var(--color-text);
+    border-radius: 3px;
+    background: var(--color-background);
+    font-family: "Raleway";
+    font-size: 1.5rem;
+    color: var(--color-text);
+}
+
+input:focus, 
+select:focus,
+textarea:focus{
+    outline: 1px solid var(--color-text);
+}
+
+.mensaje__container{
+    margin: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.mensaje__container label{
+    margin-bottom: 1rem;
+}
+
+.mensaje__container label:first-child{
+    margin-bottom: 1rem;
+}
+
+.mensaje__container label:nth-child(2){
+    display: flex;
+}
+
+
+.condiciones__container{
+    margin: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+label a,
+.condiciones__container p{
+    display: inline;
+    text-align: left;
+}
+
+
+
+
+
+
 /*ESTILOS FOOTER*/
 
 .footer{

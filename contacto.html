@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--MetaTags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Link a fuentes-->
+    <link rel="stylesheet" href="./assets/fonts/raleway.css">
+
+    <!--Link a estilos-->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
+    <!--Link a javascript-->
+    <script src="./assets/js/menu.js" defer></script>
+    <script src="./assets/js/show-videos.js" defer></script>
+
+    <title>Alday - Contacto</title>
+</head>
+<body>
+    <div class="container">
+        <!--Header / Nav de la página-->
+        <header class="header">
+            
+            <a href="https://alday.es" class="header__logo-link">
+                <img src="./assets/img/logo-alday_122x56.png" alt="Logo de Alday" class="header__logo-img">
+            </a>
+            
+            <nav class="header__nav">
+
+                <ul class="nav__pages">
+                    <li class="pages__item">
+                        <a href="index.html" class="pages__link">INICIO</a>
+                    </li>
+                    <li class="pages__item">
+                        <a href="biografia.html" class="pages__link">BIOGRAFÍA</a>
+                    </li>
+                    <li class="pages__item">
+                        <a href="trabajos.html" class="pages__link">TRABAJOS</a>
+                    </li>
+                    <li class="pages__item">
+                        <a href="contacto.html" class="pages__link pages__link--current">CONTACTO</a>
+                    </li>
+                </ul>
+
+                <ul class="nav__social">
+                    <li class="social__item">
+                        <a href="https://open.spotify.com/intl-es/artist/0wZDbifislG0bCYZ7ASz0J?si=QEE4IMFWSI-h4F_ZTpO0Vw" target="_blank" class="social__link">
+                            <img src="./assets/img/logo-spotify_50x50.png" alt="Logo de Spotify" class="social__img">
+                        </a>
+                    </li>
+
+                    <li class="social__item">
+                        <a href="https://www.instagram.com/aldaymusic/" target="_blank" class="social__link">
+                            <img src="./assets/img/logo-instagram_50x50.png" alt="Logo de Instagram" class="social__img">
+                        </a>
+                    </li>
+
+                    <li class="social__item">
+                        <a href="https://www.youtube.com/@aldaymusic" target="_blank" class="social__link">
+                            <img src="./assets/img/logo-youtube_50x50.png" alt="Logo de Youtube" class="social__img">
+                        </a>
+                    </li>
+
+                    <li class="social__item">
+                        <a href="https://www.facebook.com/aldaymusic" target="_blank" class="social__link">
+                            <img src="./assets/img/logo-facebook_50x50.png" alt="Logo de Facebook" class="social__img">
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+            
+            <button class="header__toggle">
+                <span class="toggle__lines toogle__line--1"></span>
+                <span class="toggle__lines toogle__line--2"></span>
+                <span class="toggle__lines toogle__line--3"></span>
+                <span class="toggle__lines toogle__line--4"></span>
+            </button>
+
+        </header>
+        <!--Contenido Main-->
+        <main class="main">
+
+            <header class="main__header">
+                <h1 class="single__title"><strong>CONTACTO</strong></h1>
+                <h2 class="single__subtitle">Rellena el formulario y cuéntame lo que quieras</h2>
+            </header>
+
+            <section class="main__contact">
+                <form class="contact__form" id="form">
+
+                    <fieldset class="contact__personal">
+                        <legend>DATOS PERSONALES</legend>
+                        <div class="personal__container">
+                            <label>Nombre<span>*</span>
+                                <input type="text" name="nombre" placeholder="Escribe tu nombre" minlength="2" required>
+                            </label>
+                            <label>Edad
+                                <input type="number" name="edad" placeholder="Escribe tu edad">
+                            </label>
+                            <label>Sexo:
+                                <label>Hombre</label>
+                                <input type="radio" name="sexo" value="hombre">
+                                <label>Mujer</label>
+                                <input type="radio" name="sexo" value="mujer">
+                            </label>
+                            <label>Email<span>*</span>
+                                <input type="email" name="email" placeholder="Escribe tu email" required>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="contact__mensaje">
+                        <legend>MENSAJE</legend>
+                        <div class="mensaje__container">
+                            <label>Asunto
+                                <select name="asunto" required>
+                                    <option value="contratacion">Contratación</option>
+                                    <option value="cancion">Canción personalizada</option>
+                                    <option value="contarme">Contarme algo</option>
+                                    <option value="otros">Otros</option>
+                                </select>
+                            </label>
+                            <label>Mensaje
+                                <textarea name="mensaje" placeholder="Escribe aquí tu mensaje" minlength="10" maxlength="500" required></textarea>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="contact__condiciones">
+                        <legend>TÉRMINOS Y CONDICIONES</legend>
+                        <div class="condiciones__container">
+                            <label>He leído y acepto la <a>política de privacidad</a>
+                                <input type="checkbox" name="policy" required>
+                            </label>
+                            <label>Deseo recibir correos con nuevos lanzamiento y novedades
+                                <input type="checkbox" name="news">
+                            </label>
+                            <p>Todos los campos con * son obligatorios</p>
+                        </div>
+                    </fieldset>
+                </form>
+
+                <input form="form" type="submit" name="enviar" value="Enviar">
+                
+            </section>
+        </main>
+        <!--Footer-->
+        <footer class="footer">
+            <div class="footer__container">
+                <p class="footer__name">Rafa Alday 2024</p>
+            <p class="footer__text">Todos los derechos reservados</p>
+            </div>
+        </footer>
+    </div>
+    
+</body>
+</html>
