@@ -605,6 +605,10 @@ textarea:focus{
 
 .mensaje__container label:first-child{
     margin-bottom: 3rem;
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+    gap: 2rem;
 }
 
 .mensaje__container label:nth-child(2){
@@ -612,7 +616,7 @@ textarea:focus{
 }
 
 .mensaje__container label:first-child > select{
-    margin-left: 3.1rem;
+    margin-left: 1.6rem;
     width: 30rem;
 }
 
