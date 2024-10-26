@@ -1,4 +1,4 @@
-/*VARIABLES GENERALES*/
+/*----------VARIABLES GENERALES----------*/
 
 :root {
     --color-principal: #fff0b8;
@@ -7,7 +7,7 @@
     --color-text: #142f30;
 }
 
-/*ESTILOS GENERALES - INICIALES*/
+/*----------ESTILOS INICIALES----------*/
 
 * {
     margin: 0;
@@ -50,7 +50,7 @@ body {
     display: none;
 }
 
-/*ESTILOS HEADER*/
+/*----------ESTILOS HEADER----------*/
 
 .header {
     width: 100%;
@@ -139,7 +139,7 @@ body {
     display: none;
 }
 
-/*ESTILOS MAIN*/
+/*----------ESTILOS MAIN COMPARTIDOS----------*/
 
 .main {
     width: 100%;
@@ -147,20 +147,17 @@ body {
     min-height: calc(100vh - 100px);
     margin: 0 auto;
     margin-bottom: 2rem;
-    /* padding: 3rem; */
+    padding: 3rem 0 6rem 0;
     position: relative;
     z-index: 10;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
 }
 
 .main__header{
     text-align: center;
-    margin: 2.6rem 0;
+    margin: 2.6rem 0 4rem 0;
 }
 
-.single__title{
+.titles{
     font-size: 3rem;
     margin-bottom: 1.8rem;
     animation-name: title;
@@ -176,7 +173,7 @@ body {
     }
 }
 
-.single__subtitle{
+.subtitles{
     font-size: 2rem;
     text-wrap: balance;
     animation-name: subtitle;
@@ -192,14 +189,14 @@ body {
     }
 }
 
+/*----------ESTILOS INICIO----------*/
+
 .main__single{
     width: 90%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     padding: 0 5rem;
-    /* margin-bottom: 2.9rem; */
-    
 }
 
 .single__video{
@@ -281,7 +278,7 @@ body {
     transform: scale(1.1) rotate(25deg);
 }
 
-/*ESTILOS BIOGRAFÍA*/
+/*----------ESTILOS BIOGRAFÍA----------*/
 
 .main__bio{
     width: 80%;
@@ -289,10 +286,8 @@ body {
     justify-content: center;
     align-items: center;
     gap: 5rem;
-    margin: 0 auto;
+    margin: 3rem auto 10rem auto;
     padding: 0 5rem;
-    margin-top: 3rem;
-    margin-bottom: 8rem;
 }
 
 .bio__foto-container{
@@ -375,7 +370,7 @@ body {
     transform: rotateZ(360deg);
 }
 
-/*ESTILOS TRABAJOS*/
+/*----------ESTILOS TRABAJOS----------*/
 
 .trabajos{
     width: 100%;
@@ -415,11 +410,11 @@ body {
 }
 
 .trabajos__list li:nth-child(3){
-    animation-delay: .10s;
+    animation-delay: .12s;
 }
 
 .trabajos__list li:nth-child(4){
-    animation-delay: .15s;
+    animation-delay: .19s;
 }
 
 .trabajos__list li:hover{
@@ -443,7 +438,7 @@ figure img{
 }
 
 #videclips{
-    margin: 2rem auto;
+    margin: 3rem auto 2rem auto;
     width: 90%;
     padding-bottom: 3rem;
 }
@@ -451,7 +446,7 @@ figure img{
 #videclips h2{
     text-align: center;
     padding: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     animation-name: subtitle;
     animation-duration: 1s;
 }
@@ -488,6 +483,8 @@ figure img{
     padding: 2rem 0;
     width: 80%;
     margin: 0 auto;
+    animation-name: subtitle;
+    animation-duration: 1s;
 }
 
 .spotify-container h2{
@@ -500,7 +497,7 @@ figure img{
     min-height: 600px;
 }
 
-/*ESTILOS CONTACTO*/
+/*----------ESTILOS CONTACTO----------*/
 
 .main__contact{
     width: 90%;
@@ -687,13 +684,7 @@ input[type="submit"]:hover{
     background-color: var(--color-principal);
 }
 
-
-
-
-
-
-
-/*ESTILOS FOOTER*/
+/*----------ESTILOS FOOTER----------*/
 
 .footer{
     position: absolute;

@@ -19,134 +19,141 @@
     <title>Alday - Trabajos y videclips</title>
 </head>
 <body>
-    <div class="container">
-        <!--Header / Nav de la página-->
-        <header class="header">
-            
-            <a href="https://alday.es" class="header__logo-link">
-                <img src="./assets/img/logo-alday_122x56.png" alt="Logo de Alday" class="header__logo-img">
-            </a>
-            
-            <nav class="header__nav">
+    <!--Header / Nav de la página-->
+    <header class="header">
 
-                <ul class="nav__pages">
-                    <li class="pages__item">
-                        <a href="index.html" class="pages__link">INICIO</a>
-                    </li>
-                    <li class="pages__item">
-                        <a href="biografia.html" class="pages__link">BIOGRAFÍA</a>
-                    </li>
-                    <li class="pages__item">
-                        <a href="trabajos.html" class="pages__link pages__link--current">TRABAJOS</a>
-                    </li>
-                    <li class="pages__item">
-                        <a href="contacto.html" class="pages__link">CONTACTO</a>
-                    </li>
-                </ul>
+        <!--Header LOGO-->
+        <a href="https://alday.es" class="header__logo-link">
+            <img src="./assets/img/logo-alday_122x56.png" alt="Logo de Alday" class="header__logo-img">
+        </a>
 
-                <ul class="nav__social">
-                    <li class="social__item">
-                        <a href="https://open.spotify.com/intl-es/artist/0wZDbifislG0bCYZ7ASz0J?si=QEE4IMFWSI-h4F_ZTpO0Vw" target="_blank" class="social__link">
-                            <img src="./assets/img/logo-spotify_50x50.png" alt="Logo de Spotify" class="social__img">
-                        </a>
-                    </li>
+        <!--Header NAVBAR-->
+        <nav class="header__nav">
+            <!--Lista Pages-->
+            <ul class="nav__pages">
+                <li class="pages__item">
+                    <a href="index.html" class="pages__link">INICIO</a>
+                </li>
+                <li class="pages__item">
+                    <a href="biografia.html" class="pages__link">BIOGRAFÍA</a>
+                </li>
+                <li class="pages__item">
+                    <a href="trabajos.html" class="pages__link pages__link--current">TRABAJOS</a>
+                </li>
+                <li class="pages__item">
+                    <a href="contacto.html" class="pages__link">CONTACTO</a>
+                </li>
+            </ul>
+            <!--Lista Social-->
+            <ul class="nav__social">
+                <li class="social__item">
+                    <a href="https://open.spotify.com/intl-es/artist/0wZDbifislG0bCYZ7ASz0J?si=QEE4IMFWSI-h4F_ZTpO0Vw" target="_blank" class="social__link">
+                        <img src="./assets/img/logo-spotify_50x50.png" alt="Logo de Spotify" class="social__img">
+                    </a>
+                </li>
 
-                    <li class="social__item">
-                        <a href="https://www.instagram.com/aldaymusic/" target="_blank" class="social__link">
-                            <img src="./assets/img/logo-instagram_50x50.png" alt="Logo de Instagram" class="social__img">
-                        </a>
-                    </li>
+                <li class="social__item">
+                    <a href="https://www.instagram.com/aldaymusic/" target="_blank" class="social__link">
+                        <img src="./assets/img/logo-instagram_50x50.png" alt="Logo de Instagram" class="social__img">
+                    </a>
+                </li>
 
-                    <li class="social__item">
-                        <a href="https://www.youtube.com/@aldaymusic" target="_blank" class="social__link">
-                            <img src="./assets/img/logo-youtube_50x50.png" alt="Logo de Youtube" class="social__img">
-                        </a>
-                    </li>
+                <li class="social__item">
+                    <a href="https://www.youtube.com/@aldaymusic" target="_blank" class="social__link">
+                        <img src="./assets/img/logo-youtube_50x50.png" alt="Logo de Youtube" class="social__img">
+                    </a>
+                </li>
 
-                    <li class="social__item">
-                        <a href="https://www.facebook.com/aldaymusic" target="_blank" class="social__link">
-                            <img src="./assets/img/logo-facebook_50x50.png" alt="Logo de Facebook" class="social__img">
-                        </a>
-                    </li>
-                </ul>
+                <li class="social__item">
+                    <a href="https://www.facebook.com/aldaymusic" target="_blank" class="social__link">
+                        <img src="./assets/img/logo-facebook_50x50.png" alt="Logo de Facebook" class="social__img">
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-            </nav>
-            
-            <button class="header__toggle">
-                <span class="toggle__lines toogle__line--1"></span>
-                <span class="toggle__lines toogle__line--2"></span>
-                <span class="toggle__lines toogle__line--3"></span>
-                <span class="toggle__lines toogle__line--4"></span>
-            </button>
+        <!--Header BUTTON (Solo responsive)-->
+        <button class="header__toggle">
+            <span class="toggle__lines toogle__line--1"></span>
+            <span class="toggle__lines toogle__line--2"></span>
+            <span class="toggle__lines toogle__line--3"></span>
+            <span class="toggle__lines toogle__line--4"></span>
+        </button>
 
+    </header>
+
+    <!--Contenido Main-->
+    <main class="main">
+
+        <!--Header del Contenido Principal-->
+        <header class="main__header">
+            <h1 class="titles">MIS <strong>TRABAJOS</strong></h1>
+            <h2 class="subtitles">Selecciona el trabajo que quieras y te muestro los videoclips</h2>
         </header>
-        <!--Contenido Main-->
-        <main class="main">
 
-            <header class="main__header">
-                <h1 class="single__title">MIS <strong>TRABAJOS</strong></h1>
-                <h2 class="single__subtitle">Selecciona el trabajo que quieras y te muestro los videoclips</h2>
-            </header>
+        <!--Section Trabajos-->
+        <section class="main__trabajos">
 
-            <section class="main__trabajos">
-                <!--Selector de trabajos-->
-                <div class="trabajos">
-                    <ul class="trabajos__list">
-                        <li onclick="elegirTrabajo('1')">
-                            <figure class="trabajos__figure">
-                                <img src="./assets/img/portada_stream-sessions_350px.jpg" alt="Portada del EP 'Stream Sessions' by Alday">
-                                <figcaption>
-                                    <h3 class="portada__title">STREAM SESSIONS</h3>
-                                    <P>EP - 2024</P>
-                                </figcaption>
-                            </figure>
-                        </li>
-                        <li onclick="elegirTrabajo('2')">
-                            <figure class="trabajos__figure">
-                                <img src="./assets/img/portada_uvmd_350px.jpg" alt="Portada del LP 'Una victoria, mil derrotas' by Alday">
-                                <figcaption>
-                                    <h3 class="portada__title">UNA VICTORIA, MIL DERROTAS</h3>
-                                    <P>LP - 2021</P>
-                                </figcaption>
-                            </figure>
-                        </li>
-                        <li onclick="elegirTrabajo('3')">
-                            <figure class="trabajos__figure">
-                                <img src="./assets/img/portada_elucubraciones_350px.jpg" alt="Portada del EP 'Elucubraciones' by Alday">
-                                <figcaption>
-                                    <h3 class="portada__title">ELUCUBRACIONES</h3>
-                                    <P>EP - 2018</P>
-                                </figcaption>
-                            </figure>
-                        </li>
-                        <li onclick="elegirTrabajo('4')">
-                            <figure class="trabajos__figure">
-                                <img src="./assets/img/portada_la-jungla_350px.jpg" alt="Portada del EP 'La jungla' by Alday">
-                                <figcaption>
-                                    <h3 class="portada__title">LA JUNGLA (O MIRAR ATRÁS)</h3>
-                                    <P>EP - 2017</P>
-                                </figcaption>
-                            </figure>
-                        </li>
-                    </ul>
-                </div>
+            <!--Selector de trabajos-->
+            <article class="trabajos">
+                <ul class="trabajos__list">
+                    <li onclick="elegirTrabajo('1')">
+                        <figure class="trabajos__figure">
+                            <img src="./assets/img/portada_stream-sessions_350px.jpg" alt="Portada del EP 'Stream Sessions' by Alday">
+                            <figcaption>
+                                <h3 class="portada__title">STREAM SESSIONS</h3>
+                                <P>EP - 2024</P>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li onclick="elegirTrabajo('2')">
+                        <figure class="trabajos__figure">
+                            <img src="./assets/img/portada_uvmd_350px.jpg" alt="Portada del LP 'Una victoria, mil derrotas' by Alday">
+                            <figcaption>
+                                <h3 class="portada__title">UNA VICTORIA, MIL DERROTAS</h3>
+                                <P>LP - 2021</P>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li onclick="elegirTrabajo('3')">
+                        <figure class="trabajos__figure">
+                            <img src="./assets/img/portada_elucubraciones_350px.jpg" alt="Portada del EP 'Elucubraciones' by Alday">
+                            <figcaption>
+                                <h3 class="portada__title">ELUCUBRACIONES</h3>
+                                <P>EP - 2018</P>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li onclick="elegirTrabajo('4')">
+                        <figure class="trabajos__figure">
+                            <img src="./assets/img/portada_la-jungla_350px.jpg" alt="Portada del EP 'La jungla' by Alday">
+                            <figcaption>
+                                <h3 class="portada__title">LA JUNGLA (O MIRAR ATRÁS)</h3>
+                                <P>EP - 2017</P>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </article>
 
-                <div id="videclips" class="oculto"></div>
-                
-                <div class="spotify-container">
-                    <h2>También puedes escuchar todas mis canciones en Spotify</h2>
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/0wZDbifislG0bCYZ7ASz0J?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-            </section>
-        </main>
-        <!--Footer-->
-        <footer class="footer">
-            <div class="footer__container">
-                <p class="footer__name">Rafa Alday 2024</p>
-            <p class="footer__text">Todos los derechos reservados</p>
+            <!--VideoClips de cada trabajo **JS**-->
+            <article id="videclips" class="oculto"></article>
+            
+            <!--Reproductor Spotify-->
+            <div class="spotify-container">
+                <h2>También puedes escuchar todas mis canciones en Spotify</h2>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/0wZDbifislG0bCYZ7ASz0J?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
-        </footer>
-    </div>
-    
+        </section>
+        
+    </main>
+
+    <!--Footer-->
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__name">Rafa Alday 2024</p>
+        <p class="footer__text">Todos los derechos reservados</p>
+        </div>
+    </footer>
 </body>
 </html>
