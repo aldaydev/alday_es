@@ -113,11 +113,11 @@ conditions[7].addEventListener('click', ()=>{
 
 function getForm(){
     let nombre = document.querySelector('input[name=nombre]');
-    let edad = document.querySelector('input[name=edad]').value;
-    let sexo = document.querySelector('input[name=sexo]:checked').value;
-    let email = document.querySelector('input[name=email]').value;
-    let asunto = document.querySelector('select[name=asunto]').value;
-    let mensaje = document.querySelector('textarea[name=mensaje]').value;
+    let edad = document.querySelector('input[name=edad]');
+    let sexo = document.querySelector('input[name=sexo]:checked');
+    let email = document.querySelector('input[name=email]');
+    let asunto = document.querySelector('select[name=asunto]');
+    let mensaje = document.querySelector('textarea[name=mensaje]');
 
     return {
         nombre: nombre, 
@@ -160,11 +160,11 @@ function createSent(){
 
     let textNode = 
         `Nombre: ${form.nombre.value} <br>
-        Edad: ${form.edad} <br>
-        Sexo: ${form.sexo} <br>
-        Email: ${form.email} <br>
-        Asunto: ${form.asunto} <br>
-        Mensaje: ${form.mensaje} <br>
+        Edad: ${form.edad.value} <br>
+        Sexo: ${form.sexo.value} <br>
+        Email: ${form.email.value} <br>
+        Asunto: ${form.asunto.value} <br>
+        Mensaje: ${form.mensaje.value} <br>
         `
     ;
 
@@ -187,18 +187,26 @@ let generalForm = document.getElementById('form');
 
 
 function faltanCampos(){
-    let div = document.createElement('div');
-    let text = document.createElement('p').appendChild(document.createTextNode('Faltan algunos datos por rellenar o los has completado de manera incorrecta'));
-    div.style.textAlign = 'center';
-    div.style.fontWeight = 'bold';
-    div.style.color = 'red';
-
+    
     let main = document.querySelector('.contact__form');
-    main.insertBefore(div, main.firstChild);
+    const noDiv = document.querySelector('.contact__personal');
 
-    console.log(text);
-    div.appendChild(text);
-    // document.body.appendChild(div);
+    if(main.firstElementChild == noDiv){
+        let div = document.createElement('div');
+        let text = document.createElement('p').appendChild(document.createTextNode('Faltan algunos datos por rellenar o los has completado de manera incorrecta'));
+        div.style.textAlign = 'center';
+        div.style.fontWeight = 'bold';
+        div.style.color = 'red';
+    
+        
+        main.insertBefore(div, main.firstChild);
+    
+        div.appendChild(text);
+        // document.body.appendChild(div);
+    }
+
+    
+
 }
 
 //Evento para enviar formulario
@@ -207,13 +215,34 @@ sendBtn.addEventListener('click', (e)=>{
     e.preventDefault();
 
     let option = getForm();
+    //Validación de campos obligatorios
 
-    if(option.nombre.value == "" || option.nombre.value.length < 3 ){
+    //Campos obligatorios
+    let nombreObligatorio = option.nombre.value == "" || option.nombre.value.length < 3;
+    let emailObligatorio = option.email.value == "" || !option.email.value.includes("@") || !option.email.value.includes(".") || option.email.value.length < 5;
+    let mensajeObligatorio = option.mensaje.value == "" || option.mensaje.value.length < 10;
+
+    console.log(emailObligatorio)
+    // console.log(option.email.value == "");
+    // console.log(!option.email.value.includes("@"));
+    // console.log(!option.email.value.includes("."));
+    // console.log(option.email.value.length < 5);
+
+    if(nombreObligatorio || emailObligatorio || mensajeObligatorio){
         faltanCampos();
         window.scrollTo(0, 0);
-        sendBtn.setAttribute('href', '#name');
-        option.nombre.style.backgroundColor = "red";
-    }else if(){}
+
+        if(nombreObligatorio){
+            option.nombre.style.backgroundColor = "red";
+        }else if(emailObligatorio){
+            option.nombre.style.backgroundColor = "#fffbed";
+            option.email.style.backgroundColor = "red";
+        }else if(mensajeObligatorio){
+            option.nombre.style.backgroundColor = "#fffbed";
+            option.email.style.backgroundColor = "#fffbed";
+            option.mensaje.style.backgroundColor = "red";
+        }
+
     }else{
         let formElements = createSent();
 
