@@ -74,7 +74,7 @@ function createConditions(){
     volver.style.color = '#FFFBED';
     let volverText = document.createTextNode('Pulsa aquí para volver');
 
-    return [titleText, title, textNode, text, volverText, volver, dialog, volver]
+    return [titleText, title, textNode, text, volverText, volver, dialog]
 }
 
 //Obtención de array con todos los elementos
@@ -103,7 +103,7 @@ enlace.addEventListener('click', ()=>{
 });
 
 //Evento que oculta la ventana de condiciones
-conditions[7].addEventListener('click', ()=>{
+conditions[5].addEventListener('click', ()=>{
     
     document.body.removeChild(conditions[6]);
 });
@@ -118,22 +118,40 @@ function getForm(){
     let email = document.querySelector('input[name=email]');
     let asunto = document.querySelector('select[name=asunto]');
     let mensaje = document.querySelector('textarea[name=mensaje]');
+    let policy = document.querySelector('input[name=policy]:checked');
 
-    return {
-        nombre: nombre, 
-        edad: edad,
-        sexo: sexo,
-        email: email,
-        asunto: asunto,
-        mensaje: mensaje
-        };
+    console.log(typeof edad.value);
+
+    if(edad.value == "" || edad.value == " "){
+        edad = "No definido";
+        return {
+            nombre: nombre, 
+            edad: edad,
+            sexo: sexo,
+            email: email,
+            asunto: asunto,
+            mensaje: mensaje,
+            policy: policy
+            };
+    }else{
+        return {
+            
+            nombre: nombre, 
+            edad: edad.value,
+            sexo: sexo,
+            email: email,
+            asunto: asunto,
+            mensaje: mensaje,
+            policy: policy
+            };
+    }
 
 }
 
-//Función que crea elem emergente e hijos (Formulario Enviado)
-function createSent(){
-    //Creación y diseño de elemento de la ventana emergente
+//Creación y diseño de elemento de la ventana emergente
+function createDialog(){
     let dialog = document.createElement('dialog');
+    dialog.setAttribute('id', 'dialog');
     dialog.style.width = '50%';
     dialog.style.display = 'block';
     dialog.style.zIndex = '999';
@@ -142,6 +160,29 @@ function createSent(){
     dialog.style.backgroundColor = '#142f30';
     dialog.style.position = 'fixed';
 
+    return dialog;
+}
+
+function createVolver(){
+    let volver = document.createElement('a');
+    volver.setAttribute('id', 'volver');
+    volver.style.textAlign = 'center';
+    volver.style.margin = '3rem';
+    volver.style.fontSize = '3rem';
+    volver.style.cursor = 'pointer';
+    volver.style.color = '#FFFBED';
+    let volverText = document.createTextNode('Pulsa aquí para volver');
+    volver.appendChild(volverText);
+
+    return volver;
+}
+
+let dialog = createDialog();
+let volver = createVolver();
+
+//Función que crea elem emergente e hijos (Formulario Enviado)
+function createSent(){
+
     let title = document.createElement('h3');
     title.style.color = '#FFFBED';
     title.style.textAlign = 'center';
@@ -149,18 +190,17 @@ function createSent(){
     title.style.fontSize = '4rem';
     let titleText = document.createTextNode('Formulario enviado. Resumen:');
 
-    let form = getForm();
-
     let text = document.createElement('p');
     text.style.textAlign = 'center';
     text.style.margin = '3rem';
     text.style.fontSize = '2rem';
     text.style.color = '#FFFBED';
     
-
+    let form = getForm();
+    
     let textNode = 
         `Nombre: ${form.nombre.value} <br>
-        Edad: ${form.edad.value} <br>
+        Edad: ${form.edad} <br>
         Sexo: ${form.sexo.value} <br>
         Email: ${form.email.value} <br>
         Asunto: ${form.asunto.value} <br>
@@ -168,15 +208,7 @@ function createSent(){
         `
     ;
 
-    let volver = document.createElement('a');
-    volver.style.textAlign = 'center';
-    volver.style.margin = '3rem';
-    volver.style.fontSize = '3rem';
-    volver.style.cursor = 'pointer';
-    volver.style.color = '#FFFBED';
-    let volverText = document.createTextNode('Pulsa aquí para volver');
-
-    return [titleText, title, textNode, text, volverText, volver, dialog, volver]
+    return [titleText, title, textNode, text, volver, dialog];
 }
 
 
@@ -204,9 +236,6 @@ function faltanCampos(){
         div.appendChild(text);
         // document.body.appendChild(div);
     }
-
-    
-
 }
 
 //Evento para enviar formulario
@@ -222,13 +251,7 @@ sendBtn.addEventListener('click', (e)=>{
     let emailObligatorio = option.email.value == "" || !option.email.value.includes("@") || !option.email.value.includes(".") || option.email.value.length < 5;
     let mensajeObligatorio = option.mensaje.value == "" || option.mensaje.value.length < 10;
 
-    console.log(emailObligatorio)
-    // console.log(option.email.value == "");
-    // console.log(!option.email.value.includes("@"));
-    // console.log(!option.email.value.includes("."));
-    // console.log(option.email.value.length < 5);
-
-    if(nombreObligatorio || emailObligatorio || mensajeObligatorio){
+    if(nombreObligatorio || emailObligatorio || mensajeObligatorio || option.policy == null){
         faltanCampos();
         window.scrollTo(0, 0);
 
@@ -241,22 +264,32 @@ sendBtn.addEventListener('click', (e)=>{
             option.nombre.style.backgroundColor = "#fffbed";
             option.email.style.backgroundColor = "#fffbed";
             option.mensaje.style.backgroundColor = "red";
+        }else if(option.policy == null){
+            let policyText = document.querySelector('.condiciones__container > label');
+            option.nombre.style.backgroundColor = "#fffbed";
+            option.email.style.backgroundColor = "#fffbed";
+            option.mensaje.style.backgroundColor = "#fffbed";
+            policyText.style.backgroundColor = "red";
         }
 
     }else{
         let formElements = createSent();
 
         formElements[1].appendChild(formElements[0]);
-        formElements[6].appendChild(formElements[1]);
+        formElements[5].appendChild(formElements[1]);
     
         
         formElements[3].innerHTML = formElements[2];
-        formElements[6].appendChild(formElements[3]);
+        formElements[5].appendChild(formElements[3]);
     
-        
         formElements[5].appendChild(formElements[4]);
-        formElements[6].appendChild(formElements[5]);
     
-        document.body.appendChild(formElements[6]);
+        document.body.appendChild(formElements[5]);
+
     }
+});
+
+volver.addEventListener('click', ()=>{
+    dialog.innerHTML = "";
+    document.body.removeChild(dialog);
 });
