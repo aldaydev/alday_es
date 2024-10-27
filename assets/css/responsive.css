@@ -1,42 +1,112 @@
+@media screen and (max-width: 1557px){
+
+    /*----------ESTILOS CONTACTO----------*/
+
+    .contact__personal,
+    .contact__mensaje,
+    .contact__condiciones{
+        font-size: 1.6rem;
+    }
+
+    .personal__container{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .personal__container > label{
+        flex-basis: 40%;
+    }
+
+    .personal__container input:first-child,
+    .personal__container input:nth-child(2),
+    .personal__container input:nth-child(4){
+        width: 70%;
+        margin-right: auto;
+    }
+}
+
 @media screen and (max-width: 1441px) {
     
-    /*Sección Main*/
+    /*----------ESTILOS MAIN COMPARTIDOS----------*/
+
     .main {
         padding: 0 3rem;
         min-height: calc(100vh - 100px);
     }
 
-    /* .main__single{
-        flex-direction: column;
-        justify-content: center;
-    } */
-
-    /* .single__video{
-        flex-basis: 100%;
-        padding: 0 10rem;
+    .main__header{
+        margin-bottom: 3rem;
     }
 
-    .single__iframe{
-        margin: 0 auto;
-        width: 100%;
-        height: 100%;
-    } */
+    .titles{
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
 
-    /* .single__list{
-        padding: 0 0 2rem 0;
+    .subtitles{
+        font-size: 1.8rem;
+    }
+
+    .main__single{
+        width: 90%;
+        padding: 0;
+    }
+
+    /*----------ESTILOS BIOGRAFÍA----------*/
+
+    .bio__data{
+        font-size: 1.8rem;
+    }
+    
+    .bio-more__subtitle{
+        font-size: 1.8rem;
+    }
+
+    .main__bio {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    /*----------ESTILOS TRABAJOS----------*/
+
+    .spotify-container h2{
+        font-size: 1.8rem;
+    }
+
+    /*----------ESTILOS CONTACTO----------*/
+
+    .personal__container{
+        align-items: center;
+    }
+    
+    .personal__container > label{
         flex-basis: 100%;
-        width: 70%;
-        margin: 0 auto;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 3rem;
-    } */
+        justify-content: center;
+    }
+
+    .personal__container input:first-child,
+    .personal__container input:nth-child(2),
+    .personal__container input:nth-child(4){
+        width: 70%;
+        margin-right: 0;
+    }
+
+    .personal__container input:nth-child(3){
+        display: block;
+    }
+
+    .mensaje__container label:nth-child(2) > textarea{
+        width: 80%;
+    }
 
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
 
+    /*----------ESTILOS INICIO----------*/
+    
     .main__single{
         width: 100%;
         padding: 0;
@@ -57,6 +127,34 @@
     .single__list{
         width: 90%;
     }
+
+    /*----------ESTILOS BIOGRAFÍA----------*/
+
+    .main__bio {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    /*----------ESTILOS TRABAJOS----------*/
+
+    .trabajos__list li{
+        min-width: 180px;
+    }
+
+    li figure {
+        max-width: 180px;
+    }
+
+    figure h3{
+        font-size: 1.4rem;
+    }
+
+    figure img{
+        width: 180px;
+    }
+
+    
+
 }
 
 @media screen and (max-width: 979px){
@@ -137,71 +235,186 @@
         gap: 3rem;
     }
 
-    /*Sección MAIN*/
-
     .main{
-        margin-top: 100px;
+        margin-top: 80px;
     }
 
-    .single__title{
-        font-size: 3.5rem;
-    }
+    /*----------ESTILOS INICIO----------*/
 
-    .single__subtitle{
-        font-size: 2rem;
+    .main__single{
+        flex-direction: column;
+        gap: 2.5rem;
     }
     
-    .single__video{
+    .single__list{
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
         padding: 0;
     }
 
-    .single__list{
+    /*----------ESTILOS BIOGRAFÍA----------*/
+
+    .bio__foto {
+        max-width: 350px;
+        max-height: 350px;
+    }
+
+    /*----------ESTILOS TRABAJOS----------*/
+
+    .trabajos__list li{
+        min-width: 150px;
+    }
+
+    li figure {
+        max-width: 150px;
+    }
+
+    figure h3{
+        font-size: 1.4rem;
+    }
+
+    figure img{
+        width: 150px;
+    }
+    
+    /*----------ESTILOS CONTACTO----------*/
+
+    .main__contact {
         width: 90%;
-        gap: 3rem;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+
+    /*----------ESTILOS TRABAJOS----------*/
+
+    .trabajos__list li{
+        min-width: 200px;
+    }
+
+    li figure {
+        max-width: 200px;
+    }
+
+    figure h3{
+        font-size: 1.4rem;
+    }
+
+    figure img{
+        width: 200px;
+    }
+
+    
+}
+
+@media screen and (max-width: 700px){
+
+    /*----------ESTILOS CONTACTO----------*/
+    
+    .contact__form {
+        padding: 3rem 0;
+    }
+
+    .contact__personal, .contact__mensaje, .contact__condiciones {
+        font-size: 1.8rem;
+        border: none;
+    }
+
+    .personal__container, .mensaje__container, .condiciones__container{
+        margin: 1rem 2rem;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-left: 20px;
+    }
+
+    .mensaje__container label:first-child {
+        margin-bottom: 1rem;
+    }
+
+    .mensaje__container label:nth-child(2) {
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .mensaje__container label:nth-child(2) > span {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 75px;
+    }
+
+    .mensaje__container label:nth-child(2) > textarea {
+        width: 100%;
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+
+    .mensaje__container label:first-child > select {
+        width: 100%;
     }
 }
 
-@media screen and (max-width: 519px){
-    
-    /*Sección Main*/
+@media screen and (max-width: 550px){
+
+    /*----------ESTILOS FOOTER----------*/
+
+    .footer__container{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /*----------ESTILOS MAIN----------*/
 
     .main{
-        padding: 0 1rem;
-    }
-
-    .main__header{
-        margin: 2.6rem 0.5rem;
-    }
-
-    .single__title{
-        font-size: 3rem;
-        text-wrap: balance;
-        margin-bottom: 2rem;
-    }
-
-    .single__subtitle{
-        font-size: 1.8rem;
-        text-wrap: balance;
-    }
-
-    .single__iframe{
-        padding: 0.5rem;
+        min-height: calc(100vh - 150px);
+        justify-content: start;
     }
 
     .single__list{
         flex-wrap: wrap;
-        padding: 0 3rem;
-        margin: 1.5rem auto;
+        padding: 0 1rem;
     }
 
-    .single__item{
-        flex-basis: calc(33% - 3rem);
+    .single__item {
+        flex-basis: 30%;
+        padding: 0 2rem 1rem 2rem;
     }
 
-    /*Sección Footer*/
+    /*----------ESTILOS BIOGRAFIA----------*/
 
-    .footer__container{
-        flex-direction: column;
-        gap: 0.3rem;
+    .main__bio {
+        padding: 0;
+    }
+
+    /*----------ESTILOS TRABAJOS----------*/
+
+    .spotify-container {
+        padding: 2rem 0;
+        width: 80%;
+        margin: 0 auto 3rem auto;
+    }
+
+    .spotify-container > iframe {
+        padding: 0;
+        min-height: 400px;
+    }
+
+    .main__contact {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .condiciones__container{
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 }

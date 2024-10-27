@@ -143,7 +143,7 @@ body {
 .main {
     width: 100%;
     height: auto;
-    min-height: calc(100dvh - 53,97px);
+    min-height: calc(100dvh - 53.97px);
     margin: 0 auto;
     position: relative;
     z-index: 10;
@@ -324,8 +324,13 @@ body {
     flex-basis: 60%;
     max-width: 700px;
     font-size: 2rem;
+    text-wrap: pretty;
     animation-name: data;
     animation-duration: 1s;
+}
+
+.bio__data p{
+    text-align: justify;
 }
 
 .bio__data a{
@@ -348,6 +353,7 @@ body {
 }
 
 .bio-more__subtitle{
+    text-wrap: balance;
     text-align: center;
     animation-name: subtitle;
     animation-duration: 1s;
@@ -686,6 +692,77 @@ input[type="submit"]:hover{
     outline: 1px solid var(--color-text);
     color: var(--color-text);
     background-color: var(--color-principal);
+}
+
+/*Estilo de elementos creados en JS*/
+
+.dialog{
+    width: 50%;
+    height: 70%;
+    display: block;
+    z-index: 999;
+    position: fixed;
+    top: 15%;
+    left: 0;
+    margin: auto;
+    padding: 3rem;
+    border-radius: 10px;
+    background-color: #142f30;
+
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.dialog::-webkit-scrollbar {
+    width: 30px;
+    background: transparent;
+}
+
+.dialog::-webkit-scrollbar-thumb {
+    border: 10px solid transparent;
+    box-shadow: inset 0 0 0 10px var(--color-principal);
+    border-radius: 14px;
+}
+
+.dialog::-webkit-scrollbar-track {
+    margin: 10px;
+}
+
+.dialog__title{
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+    color: var(--color-background);
+}
+
+.dialog__text{
+    font-size: 2rem;
+    text-align: justify;
+    text-wrap: pretty;
+    margin: 3rem 5rem;
+    color: var(--color-background);
+}
+
+.dialog__volver{
+    font-size: 2.5rem;
+    text-align: center;
+    text-decoration: underline;
+    margin: 3rem 0;
+    cursor: pointer;
+    color: var(--color-background);
+}
+
+.dialog__data{
+    font-size: 2rem;
+    text-align: justify;
+    text-wrap: pretty;
+    margin: 3rem auto;
+    color: var(--color-background);
+}
+
+.campoError{
+    border: 3px solid red;
 }
 
 /*----------ESTILOS FOOTER----------*/

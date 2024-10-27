@@ -44,34 +44,18 @@ let enlace = document.getElementById('enlace');
 function createConditions(){
     //Creación y diseño de elemento de la ventana emergente
     let dialog = document.createElement('dialog');
-    dialog.style.width = '50%';
-    dialog.style.display = 'block';
-    dialog.style.zIndex = '999';
-    dialog.style.top = '25%';
-    dialog.style.left = '25%';
-    dialog.style.backgroundColor = '#142f30';
-    dialog.style.position = 'fixed';
+    dialog.setAttribute('class', 'dialog');
 
     let title = document.createElement('h3');
-    title.style.color = '#FFFBED';
-    title.style.textAlign = 'center';
-    title.style.marginTop = '6rem';
-    title.style.fontSize = '4rem';
-    let titleText = document.createTextNode('Política de privacidad');
+    title.setAttribute('class', 'dialog__title');
+    let titleText = document.createTextNode('POLÍTICA DE PRIVACIDAD');
 
     let text = document.createElement('p');
-    text.style.textAlign = 'center';
-    text.style.margin = '3rem';
-    text.style.fontSize = '3rem';
-    let textNode = document.createTextNode('Los datos serán almacenados y gestionados por Rafa Alday y solo se hará uso de ellos para fines de la comunicación con la persona interesada. Si en cualquier momento quieres gestionar tus datos ponte en contacto con datos@alday.es');
-    text.style.color = '#FFFBED';
+    text.setAttribute('class', 'dialog__text');
+    let textNode = document.createTextNode('Los datos serán almacenados y gestionados por Rafa Alday y solo se hará uso de ellos para fines de la comunicación con la persona interesada. En ningún caso se cederá la información a terceros. Si aceptas estos terminos estás de acuerdo en que puedan almacenar dichos datos y utilizarlos para contactar contigo. Si en cualquier momento quieres gestionar, hacer algún cambio o solicitar la eliminación de tus datos ponte en contacto con datos@alday.es');
 
     let volver = document.createElement('a');
-    volver.style.textAlign = 'center';
-    volver.style.margin = '3rem';
-    volver.style.fontSize = '3rem';
-    volver.style.cursor = 'pointer';
-    volver.style.color = '#FFFBED';
+    volver.setAttribute('class', 'dialog__volver');
     let volverText = document.createTextNode('Pulsa aquí para volver');
 
     return [titleText, title, textNode, text, volverText, volver, dialog]
@@ -110,7 +94,7 @@ conditions[5].addEventListener('click', ()=>{
 
 //----------Funcionalidad - Enviar formulario
 
-
+//Función que recoge los datos del form
 function getForm(){
     let nombre = document.querySelector('input[name=nombre]');
     let edad = document.querySelector('input[name=edad]');
@@ -152,13 +136,7 @@ function getForm(){
 function createDialog(){
     let dialog = document.createElement('dialog');
     dialog.setAttribute('id', 'dialog');
-    dialog.style.width = '50%';
-    dialog.style.display = 'block';
-    dialog.style.zIndex = '999';
-    dialog.style.top = '25%';
-    dialog.style.left = '25%';
-    dialog.style.backgroundColor = '#142f30';
-    dialog.style.position = 'fixed';
+    dialog.setAttribute('class', 'dialog');
 
     return dialog;
 }
@@ -166,11 +144,8 @@ function createDialog(){
 function createVolver(){
     let volver = document.createElement('a');
     volver.setAttribute('id', 'volver');
-    volver.style.textAlign = 'center';
-    volver.style.margin = '3rem';
-    volver.style.fontSize = '3rem';
-    volver.style.cursor = 'pointer';
-    volver.style.color = '#FFFBED';
+    volver.setAttribute('class', 'dialog__volver');
+
     let volverText = document.createTextNode('Pulsa aquí para volver');
     volver.appendChild(volverText);
 
@@ -184,27 +159,23 @@ let volver = createVolver();
 function createSent(){
 
     let title = document.createElement('h3');
-    title.style.color = '#FFFBED';
-    title.style.textAlign = 'center';
-    title.style.marginTop = '6rem';
-    title.style.fontSize = '4rem';
-    let titleText = document.createTextNode('Formulario enviado. Resumen:');
+    title.setAttribute('class', 'dialog__title');
+
+    let titleText = document.createTextNode('FORMULARIO ENVIADO');
 
     let text = document.createElement('p');
-    text.style.textAlign = 'center';
-    text.style.margin = '3rem';
-    text.style.fontSize = '2rem';
-    text.style.color = '#FFFBED';
+    text.setAttribute('class', 'dialog__data');
     
     let form = getForm();
     
     let textNode = 
-        `Nombre: ${form.nombre.value} <br>
+        `RESUMEN: <br> <br>
+        Nombre: ${form.nombre.value} <br>
         Edad: ${form.edad} <br>
         Sexo: ${form.sexo.value} <br>
         Email: ${form.email.value} <br>
         Asunto: ${form.asunto.value} <br>
-        Mensaje: ${form.mensaje.value} <br>
+        Mensaje: <br> ${form.mensaje.value}
         `
     ;
 
@@ -256,20 +227,17 @@ sendBtn.addEventListener('click', (e)=>{
         window.scrollTo(0, 0);
 
         if(nombreObligatorio){
-            option.nombre.style.backgroundColor = "red";
+            option.nombre.setAttribute('class', 'campoError');
         }else if(emailObligatorio){
-            option.nombre.style.backgroundColor = "#fffbed";
-            option.email.style.backgroundColor = "red";
+            option.nombre.classList.remove('campoError');
+            option.email.setAttribute('class', 'campoError');
         }else if(mensajeObligatorio){
-            option.nombre.style.backgroundColor = "#fffbed";
-            option.email.style.backgroundColor = "#fffbed";
-            option.mensaje.style.backgroundColor = "red";
+            option.email.classList.remove('campoError');
+            option.mensaje.setAttribute('class', 'campoError');
         }else if(option.policy == null){
             let policyText = document.querySelector('.condiciones__container > label');
-            option.nombre.style.backgroundColor = "#fffbed";
-            option.email.style.backgroundColor = "#fffbed";
-            option.mensaje.style.backgroundColor = "#fffbed";
-            policyText.style.backgroundColor = "red";
+            option.mensaje.classList.remove('campoError');
+            policyText.setAttribute('class', 'campoError');
         }
 
     }else{
