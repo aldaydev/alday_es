@@ -1,4 +1,4 @@
-
+//Array con todos los enlaces a los vídeos
 const data = [
     ["https://www.youtube.com/embed/q35yw5k8JqA?si=DSLljExUqNcBJILA",
     "https://www.youtube.com/embed/a4GZnXQbZbI?si=cfGcHAVLlgHOfQm7",
@@ -32,6 +32,7 @@ const data = [
     'https://www.youtube.com/embed/aW_rky9sNXc?si=0-sbatr658fyQ6gH']
 ];
 
+//Función que crea el iframe y sus atributos
 function createVideos(iframe){
     let video = document.createElement('iframe');
     video.setAttribute('class', 'video');
@@ -45,12 +46,14 @@ function createVideos(iframe){
     return video;
 }
 
+//Selección de todos los elementos necesarios del DOM
 let container = document.getElementById('videclips');
 let title = document.createElement('h2');
 let videoGrid = document.createElement('div');
 videoGrid.setAttribute('class', 'videoGrid');
 let main = document.getElementsByTagName('main');
 
+//Función que inserta el contenido según el trabajo elegido
 function elegirTrabajo(value){
 
     container.setAttribute('class', 'visible');
@@ -90,6 +93,7 @@ function elegirTrabajo(value){
     main.appendChild(container);
 }
 
+//Función que borra el contenido anterior al elegir nuevo trabajo
 function reset (){
     container.innerHTML = '';
     videoGrid.innerHTML = '';

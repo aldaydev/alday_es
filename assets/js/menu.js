@@ -1,3 +1,4 @@
+//Event listener que se ejecuta cuando el DOM se ha cargado
 document.addEventListener ("DOMContentLoaded" , ()=>{
     let header = document.querySelector(".header");
     let toggle = document.querySelector(".header__toggle");
@@ -6,6 +7,7 @@ document.addEventListener ("DOMContentLoaded" , ()=>{
     let line3 = document.querySelector(".toogle__line--3");
     let line4 = document.querySelector(".toogle__line--4");
 
+    //Evento para sacar el menú desplegable
     toggle.addEventListener("click", ()=>{
         let visible = document.querySelector(".visible");
         if(!visible) {
@@ -30,10 +32,9 @@ document.addEventListener ("DOMContentLoaded" , ()=>{
         };
     });
 
+    //Evento para que el menú se cierre si redimensionamos
     window.addEventListener("resize", ()=>{
-        //let size = parseInt(document.body.clientWidth);
         
-        //if (size !== size){
         header.classList.remove("visible");
         header.style.height = "73.97px";
         line1.style.top = "5px";
@@ -42,7 +43,7 @@ document.addEventListener ("DOMContentLoaded" , ()=>{
         line4.style.opacity = "1";
         line2.style.transform = "rotate(0deg)";
         line3.style.transform = "rotate(0deg)";
-        //}
+        
     });
 
 });

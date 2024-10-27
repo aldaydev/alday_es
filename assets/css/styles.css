@@ -159,6 +159,7 @@ body {
 
 .titles{
     font-size: 3rem;
+    text-wrap: balance;
     margin-bottom: 1.8rem;
     animation-name: title;
     animation-duration: 1s;

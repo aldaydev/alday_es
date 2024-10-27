@@ -1,13 +1,36 @@
-Ejercicio página personal RAfa Alday
 
-El tema de mi web personal será un portfolio de mi proyecto musical.
+----CONTENIDO DE LA PÁGINA:
 
-Constará de 4 páginas:
 1. Inicio
-    En esta página simplemente mostraré un vídeo y enlaces a uno de los últimos singles que he publicado.
+    Vídeo y enlaces a uno de los últimos singles que he publicado.
 2. Biografía
-    Aquí agregaré una foto así como un texto en el que describiré mi trayectoria haciendo canciones.
+    2.1 - Foto y texto que describe mi trayectoria haciendo canciones.
+    2.2 - Algunos enlaces a redes sociales
 3. Trabajos
-    Aquí pretendo mostrar algunos vídeos y enlaces de mis últimos trabajos. Pretendo que puedas pulsar en cualquiera de mis trabajos y te muestre a través de JS los videoclips (no prometo que me salga XD)
+    3.1 - Listado y selector de trabajos (Funcionalidad JS).
+    3.2 - Videoclips de cada trabajo (Funcionalidad JS).
+    3.3 - Reproductor de Spotify
 4. Contacto
-    Aquí crearé un formulario de contacto.
+    Formulario de contacto (Funcionalidad JS).
+
+----FUNCIONALIDADES:
+
+1. Animaciones: He creado animaciones a través de keyframes
+
+2. Responsive: He diseñado la página para que sea responsive a través de mediaqueries.
+
+3. JS "Selector de trabajos":
+
+    3.1 - A través de JS he creado una funcionalidad a través de la cual, al seleccionar uno de los trabajos, se genera contenido HTML con todos los videoclips del mismo.
+
+    3.2 - Al alternar entre los trabajos, se intercambia el contenido para que aparezca los vídeos que procedan.
+
+4. JS "Formulario":
+
+    3.1 - Si en el campo "Asunto", que es un <select>, elegimos la opción de "Otros", aparecerá un nuevo <input> de tipo texto en el que podemos describir el asunto.
+
+    3.2 - A pulsar en "política de privacidad", nos aparecerá un elemento emergente con las condiciones de la política de privacidad. Si pulsamos en "volver", nos ocultará dicha ventana.
+
+    3.3 - Validación del form con JS: Los campos nombre, email y mensaje, son campos requeridos. De no poner nada o completarlos incorrectamente, nos marcará el campo en rojo y se añadirá un mensaje al inicio del formulario.
+    
+    3.4 - Envío del form: Al enviar el formulario, si ha pasado la validación, aparecerá una ventana emergente indicando que el mensaje se ha enviado y mostrándonos una copia de los datos introducidos. Cuando presionamos "volver", se cierra el elemento emergente.

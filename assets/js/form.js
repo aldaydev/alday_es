@@ -132,7 +132,7 @@ function getForm(){
 
 }
 
-//Creación y diseño de elemento de la ventana emergente
+//Creación del contenedor de la ventana emergente
 function createDialog(){
     let dialog = document.createElement('dialog');
     dialog.setAttribute('id', 'dialog');
@@ -141,6 +141,7 @@ function createDialog(){
     return dialog;
 }
 
+//Creación del botón para cerrar ventana emergente
 function createVolver(){
     let volver = document.createElement('a');
     volver.setAttribute('id', 'volver');
@@ -152,6 +153,7 @@ function createVolver(){
     return volver;
 }
 
+//Llamamos al dialog y al botón volver y los metemos en un let
 let dialog = createDialog();
 let volver = createVolver();
 
@@ -183,12 +185,11 @@ function createSent(){
 }
 
 
-//Seleción del botón de ENVIAR
+//Seleción del botón de ENVIAR y del FORM
 let sendBtn = document.getElementById('submit');
-
 let generalForm = document.getElementById('form');
 
-
+//Función para cuando faltan campos por completar
 function faltanCampos(){
     
     let main = document.querySelector('.contact__form');
@@ -215,13 +216,13 @@ sendBtn.addEventListener('click', (e)=>{
     e.preventDefault();
 
     let option = getForm();
-    //Validación de campos obligatorios
-
+    
     //Campos obligatorios
     let nombreObligatorio = option.nombre.value == "" || option.nombre.value.length < 3;
     let emailObligatorio = option.email.value == "" || !option.email.value.includes("@") || !option.email.value.includes(".") || option.email.value.length < 5;
     let mensajeObligatorio = option.mensaje.value == "" || option.mensaje.value.length < 10;
 
+    //Validación de campos obligatorios
     if(nombreObligatorio || emailObligatorio || mensajeObligatorio || option.policy == null){
         faltanCampos();
         window.scrollTo(0, 0);
@@ -239,7 +240,7 @@ sendBtn.addEventListener('click', (e)=>{
             option.mensaje.classList.remove('campoError');
             policyText.setAttribute('class', 'campoError');
         }
-
+    //Si los compos están rellenos correctamente...
     }else{
         let formElements = createSent();
 
@@ -257,6 +258,7 @@ sendBtn.addEventListener('click', (e)=>{
     }
 });
 
+//Evento para cerrar el dialog
 volver.addEventListener('click', ()=>{
     dialog.innerHTML = "";
     document.body.removeChild(dialog);

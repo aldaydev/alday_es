@@ -375,7 +375,7 @@
 
     .main{
         min-height: calc(100vh - 150px);
-        justify-content: start;
+        /* justify-content: start; */
     }
 
     .single__list{
@@ -416,5 +416,22 @@
     .condiciones__container{
         margin-left: 1rem;
         margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 400px){
+
+    .main{
+        padding: 0;
+    }
+
+    .personal__container > label:nth-child(3) {
+        align-self: self-start;
+    }
+
+    .personal__container, .mensaje__container, .condiciones__container{
+        margin: 1rem 1rem;
+        margin-top: 2rem;
+        padding-left: 0;
     }
 }
