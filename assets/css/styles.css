@@ -614,6 +614,7 @@ textarea:focus{
 .mensaje__container label:first-child{
     margin-bottom: 3rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: left;
     align-items: baseline;
     gap: 2rem;
@@ -764,6 +765,11 @@ input[type="submit"]:hover{
 
 .campoError{
     border: 3px solid red;
+}
+
+.otros{
+    width: 40rem;
+    align-self: center;
 }
 
 /*----------ESTILOS FOOTER----------*/

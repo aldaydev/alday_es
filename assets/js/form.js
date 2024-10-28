@@ -9,8 +9,9 @@ let otrosInput = document.createElement('input');
 
 //Función que genera e inserta el nuevo input
 function definirOtros(){
-    otrosInput.style.width = "40rem";
-    otrosInput.style.alignSelf = "center";
+    otrosInput.setAttribute('class', 'otros');
+    // otrosInput.style.width = "40rem";
+    // otrosInput.style.alignSelf = "center";
     otrosInput.setAttribute('type', 'text');
     otrosInput.setAttribute('name', 'otros');
     otrosInput.setAttribute('placeholder', 'Describe el asunto');
@@ -201,6 +202,8 @@ function faltanCampos(){
         div.style.textAlign = 'center';
         div.style.fontWeight = 'bold';
         div.style.color = 'red';
+        div.style.textWrap = 'balance';
+        div.style.padding = '0 10px';
     
         
         main.insertBefore(div, main.firstChild);

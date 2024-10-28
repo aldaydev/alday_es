@@ -24,6 +24,10 @@
         width: 70%;
         margin-right: auto;
     }
+
+    .personal__container > label:nth-child(3) input{
+        width: auto;
+    }
 }
 
 @media screen and (max-width: 1441px) {
@@ -101,6 +105,10 @@
         width: 80%;
     }
 
+    .otros{
+        width: 100%;
+    }
+
 }
 
 @media screen and (max-width: 1025px) {
@@ -138,11 +146,11 @@
     /*----------ESTILOS TRABAJOS----------*/
 
     .trabajos__list li{
-        min-width: 180px;
+        min-width: 150px;
     }
 
     li figure {
-        max-width: 180px;
+        max-width: 150px;
     }
 
     figure h3{
@@ -150,10 +158,14 @@
     }
 
     figure img{
-        width: 180px;
+        width: 150px;
     }
 
-    
+    /*----------ESTILOS CONTACTO----------*/
+
+    .dialog{
+        width: 70%;
+    }
 
 }
 
@@ -260,23 +272,6 @@
         max-height: 350px;
     }
 
-    /*----------ESTILOS TRABAJOS----------*/
-
-    .trabajos__list li{
-        min-width: 150px;
-    }
-
-    li figure {
-        max-width: 150px;
-    }
-
-    figure h3{
-        font-size: 1.4rem;
-    }
-
-    figure img{
-        width: 150px;
-    }
     
     /*----------ESTILOS CONTACTO----------*/
 
@@ -286,29 +281,6 @@
         padding: 0;
     }
 
-}
-
-@media screen and (max-width: 800px){
-
-    /*----------ESTILOS TRABAJOS----------*/
-
-    .trabajos__list li{
-        min-width: 200px;
-    }
-
-    li figure {
-        max-width: 200px;
-    }
-
-    figure h3{
-        font-size: 1.4rem;
-    }
-
-    figure img{
-        width: 200px;
-    }
-
-    
 }
 
 @media screen and (max-width: 700px){
@@ -359,6 +331,10 @@
 
     .mensaje__container label:first-child > select {
         width: 100%;
+    }
+
+    .dialog{
+        width: 80%;
     }
 }
 
@@ -417,13 +393,27 @@
         margin-left: 1rem;
         margin-right: 1rem;
     }
+
+    .dialog{
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 400px){
 
+    /*----------ESTILOS MAIN----------*/
+
     .main{
         padding: 0;
     }
+
+    /*----------ESTILOS INCIO----------*/
+
+    .single__iframe{
+        padding: 0 1rem;
+    }
+
+    /*----------ESTILOS CONTACTO----------*/
 
     .personal__container > label:nth-child(3) {
         align-self: self-start;
