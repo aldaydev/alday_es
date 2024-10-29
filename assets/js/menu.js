@@ -7,7 +7,7 @@ document.addEventListener ("DOMContentLoaded" , ()=>{
     let line3 = document.querySelector(".toogle__line--3");
     let line4 = document.querySelector(".toogle__line--4");
 
-    //Evento para sacar el menú desplegable
+    //Evento para sacar el menú desplegable al pulsar el botón
     toggle.addEventListener("click", ()=>{
         let visible = document.querySelector(".visible");
         if(!visible) {

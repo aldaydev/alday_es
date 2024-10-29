@@ -1,3 +1,6 @@
+Enlace al proyecto desplegado: https://music.alday.es
+
+El tema de mi web personal será un portfolio de mi proyecto musical.
 
 ----CONTENIDO DE LA PÁGINA:
 
@@ -15,7 +18,7 @@
 
 ----FUNCIONALIDADES:
 
-1. Animaciones: He creado animaciones a través de keyframes
+1. Animaciones: He creado animaciones a través de keyframes.
 
 2. Responsive: He diseñado la página para que sea responsive a través de mediaqueries.
 
