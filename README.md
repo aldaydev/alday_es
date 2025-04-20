@@ -1,4 +1,4 @@
-Enlace al proyecto desplegado: https://music.alday.es
+Enlace al proyecto desplegado: https://alday.es
 
 El tema de mi web personal será un portfolio de mi proyecto musical.
 
